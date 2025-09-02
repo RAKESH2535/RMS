@@ -1,0 +1,180 @@
+
+  #app {
+    width: 320px;
+    height: 600px;
+    background: #fff;
+    margin: auto;
+    margin-top: 10%;
+    box-shadow: 2px 2px 9px 5px rgba(0, 0, 0, 0.1);
+  }
+  #header {
+    height: 60px;
+    padding-top: 15px;
+    background: #fff;
+  }
+  #slider {
+    height: 135px;
+    background: #f4f6f9;
+  }
+  #feature {
+    height: 150px;
+    background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+  }
+  #burger-icon {
+    padding-left: 20px;
+    font-size: 19px;
+    color: #999;
+    cursor: pointer;
+  }
+  #brand-name {
+    font-size: 19px;
+    letter-spacing: 1.17px;
+    color: #777;
+  }
+  #bell-symb {
+    float: right;
+    padding-right: 20px;
+    color: #999;
+    cursor: pointer;
+  }
+  .brand-alt {
+    color: #aa91d4;
+  }
+  
+  #price-section {
+    color: #999;
+    padding-top: 30px;
+    padding-left: 20px;
+  }
+  
+  #price {
+    color: #333;
+    font-size: 26px;
+    font-family: "Roboto";
+  }
+  #price-details {
+    margin-top: 8px;
+  }
+  #avatar {
+    float: left;
+  }
+  #avatar > img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+  }
+  #price-info {
+    font-size: 13px;
+    margin-left: 40px;
+    padding-top: 1px;
+    letter-spacing: 0.4px;
+    color: #777;
+  }
+  #price-time {
+    font-size: 11px;
+    margin-left: 40px;
+  }
+  .no-pading-left {
+    padding-left: 0;
+  }
+  #payment-button-section {
+    margin-top: 35px;
+    border-left: 1px solid #ccc;
+    padding-left: 7px;
+  }
+  .btn {
+    border-radius: 0;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .btn-primary,
+  .btn-primary:hover {
+    background: #8a60c2;
+    border: none;
+  }
+  .btn-default {
+    color: #777;
+  }
+  
+  #money {
+    color: white;
+    padding-top: 34px;
+    font-family: "Roboto";
+    padding-left: 20px;
+  }
+  #money-title {
+    font-family: "Roboto-Light";
+    letter-spacing: 0.7px;
+    font-size: 17px;
+  }
+  #money-amount {
+    font-size: 50px;
+    position: relative;
+    top: -5px;
+    padding-left: 20px;
+    font-family: "Roboto-Light";
+  }
+  .currency {
+    font-size: 19px;
+    position: absolute;
+    top: 9px;
+    left: 0;
+  }
+  .cbtn {
+    padding-top: 10px;
+    padding-right: 15px;
+  }
+  .cbtn > li {
+    list-style: none;
+    color: #f6f4fa;
+    text-transform: uppercase;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    font-family: "Roboto-Light";
+    letter-spacing: 0.7px;
+    font-size: 13px;
+    border-bottom: 1px solid rgba(218, 207, 235, 0.6);
+  }
+  #content {
+    padding: 15px;
+  }
+  #content-title {
+    margin-top: 10px;
+    font-family: "Roboto";
+    letter-spacing: 0.5px;
+  }
+  #content-body {
+    display: flex;
+    flex: 1;
+    min-height: 170px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-direction: column;
+  }
+  .content-row {
+    display: flex;
+    flex: 1;
+    border-bottom: 2px solid #f1f2f7;
+  }
+  .content-col {
+    padding: 15px;
+    width: 33.33%;
+    text-align: center;
+    border-right: 2px solid #f1f2f7;
+    padding-right: 17px;
+    font-size: 14px;
+  }
+  .content-col:last-child {
+    border-right: none;
+  }
+  .content-row:last-child {
+    border-bottom: none;
+  }
+  .content-col > i {
+    width: 100%;
+    font-size: 25px;
+    color: #986fcb;
+    margin-bottom: 10px;
+  }
+  
