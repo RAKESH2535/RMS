@@ -86,6 +86,7 @@ function RentTransaction() {
       try {
         const response = await axios.get(
           `http://localhost:5000/${whichroute}/${id}`,
+          // `https://rsmapi.vercel.app/${whichroute}/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,
@@ -138,6 +139,7 @@ function RentTransaction() {
       console.log("formData ", formData);
       const res = await axios.post(
         "http://localhost:5000/rentTranscation",
+        // "https://rsmapi.vercel.app/rentTranscation",
         formData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

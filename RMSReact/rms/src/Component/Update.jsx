@@ -252,6 +252,7 @@ function Update() {
                               value={data.password}
                               onChange={handleData}
                               required=""
+                              disabled
                             />
                             <div className="help-block with-errors"></div>
                           </div>
@@ -479,6 +480,7 @@ function Update() {
                               value={data.password}
                               onChange={handleData}
                               required=""
+                              disabled
                             />
                             <div className="help-block with-errors"></div>
                           </div>

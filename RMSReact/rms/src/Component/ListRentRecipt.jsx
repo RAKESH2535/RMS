@@ -48,6 +48,8 @@ function ListRentRecipt() {
 
   console.log("recipts ", rentRecipts);
 
+  console.log("transcation ", transcation);
+
 
   useEffect(() => {
 
@@ -56,6 +58,7 @@ function ListRentRecipt() {
 
         const res = await axios.get(
           "http://localhost:5000/rentTranscation",
+          // "https://rsmapi.vercel.app/rentTranscation",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

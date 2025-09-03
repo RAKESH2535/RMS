@@ -32,6 +32,7 @@ function AddOwnerMaster() {
     try {
       const res = await axios.post(
         "http://localhost:5000/ownermaster",
+        // "https://rsmapi.vercel.app/ownermaster",
         formdata,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

@@ -41,12 +41,15 @@ function ListOwnerMaster() {
   }, [ownerMaster]);
 
   const handleUpdate = (id) => {
-    navigate(`/dashboard/ownermaster/${id}`);
+    navigate(`/dashboard/ownermaster/update?Id=${id}`);
   };
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/ownermaster/${id}`, {
+      await axios.delete(
+        `http://localhost:5000/ownermaster/${id}`,
+        // `https://rsmapi.vercel.app/ownermaster/${id}`,
+        {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

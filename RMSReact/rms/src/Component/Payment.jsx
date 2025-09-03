@@ -32,7 +32,10 @@ function Payment() {
     e.preventDefault();
 
     setLoading(true);
-    axios.post('http://localhost:5000//api-gateway')
+    axios.post(
+      'http://localhost:5000//api-gateway'
+      // 'https://rsmapi.vercel.app//api-gateway'
+    )
   }
   return (
     <div id="app">
