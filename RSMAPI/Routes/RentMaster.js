@@ -96,6 +96,8 @@ router.put("/rentmaster/:id", authMiddleware, async (req, res) => {
       incrementSchedule,
       propertymaster,
       ownerMasters,
+      paymentDate,
+      paymentMode,
     } = req.body;
 
     // Ensure that the request body contains at least one field to update
@@ -107,11 +109,13 @@ router.put("/rentmaster/:id", authMiddleware, async (req, res) => {
       !monthlyRent &&
       !incrementSchedule &&
       !propertymaster &&
-      !ownerMasters
+      !ownerMasters &&
+      !paymentDate &&
+      !paymentMode
     ) {
       return res.status(400).json({
         message:
-          "At least one field (electricityMeterNumber, clientMaster, incrementPercentage, securityDepositAmount,monthlyRent,incrementSchedule,propertymaster) is required for update",
+          "At least one field (electricityMeterNumber, clientMaster, incrementPercentage, securityDepositAmount,monthlyRent,incrementSchedule,propertymaster,paymentMode) is required for update",
       });
     }
     const updateData = await RentMaster.model.findByIdAndUpdate(
@@ -125,6 +129,7 @@ router.put("/rentmaster/:id", authMiddleware, async (req, res) => {
         incrementSchedule,
         propertymaster,
         ownerMasters,
+        paymentMode
       },
       { new: true, runValidators: true }
     );

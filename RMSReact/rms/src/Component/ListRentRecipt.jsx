@@ -134,6 +134,7 @@ function ListRentRecipt() {
                 <td>{item?.ownerMasters && item?.ownerMasters.name}</td>
                 <td>
                   <div className="d-flex align-items-center list-action">
+                    <button>View</button>
                     {/* <button
                       className="badge bg-warning mr-2"
                       onClick={() => handleDelete(item._id)}

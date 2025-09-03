@@ -12,7 +12,7 @@ function ListRentMasters() {
             <div className="col-lg-12">
               <div className="d-flex flex-wrap align-items-center justify-content-between mb-4">
                 <div>
-                  <h4 className="mb-3">RentMaster List</h4>
+                  <h4 className="mb-3">List RentMaster</h4>
                 </div>
                 <Link
                   className="btn btn-primary add-list"

@@ -17,7 +17,7 @@ function Update() {
 
   const ownerMaster = useSelector(selectAllOwnerMaster).filter(item => item._id === id)
   const propertyMaster = useSelector(selectAllPropertyMaster).filter(item => item._id === id);
-  const propertyData = useSelector(selectAllPropertyMaster).filter(item=>item.ownerMasters._id === ownerId)
+  const propertyData = useSelector(selectAllPropertyMaster).filter(item => item.ownerMasters._id === ownerId)
   const rentMaster = useSelector(selectAllRentMaster).filter(item => item._id === id)
   const clientMaster = useSelector(selectAllClientMaster).filter(item => item._id === id)
 
@@ -43,6 +43,8 @@ function Update() {
     propertymaster: "",
     clientMaster: "",
     ownerMasters: ownerId,
+    paymentDate:'',
+    paymentMode:''
   })
 
   const [data, setData] = useState({
@@ -67,6 +69,8 @@ function Update() {
     propertymaster: "",
     clientMaster: "",
     ownerMasters: ownerId,
+    paymentDate:'',
+    paymentMode:''
   });
 
   const [message, setMessage] = useState({
@@ -82,12 +86,11 @@ function Update() {
       }
       else if (whichroute === 'rentmaster') {
         setData(rentMaster[0])
-        console.log(rentMaster[0]);
-        
+
       }
       else if (whichroute === 'clientmaster') {
         setData(clientMaster[0])
-        
+
       }
       else {
         setData(ownerMaster[0])
@@ -725,6 +728,22 @@ function Update() {
                                       , {item.city}, {item.state}
                                     </option>
                                   ))}
+                              </select>
+                              <div className="help-block with-errors"></div>
+                            </div>
+                          </div>
+                          <div className="col-md-6">
+                            <div className="form-group">
+                              <label>Payment *</label>
+                              <select className="form-control" 
+                              name="paymentMode" 
+                              value={data.paymentMode} 
+                              onChange={handleData} 
+                              required>
+                                <option value="">Select</option>
+                                <option value='cash'>Cash</option>
+                                <option value='Online_Payment'>Online Payment</option>
+                                <option value='Any'>Any</option>
                               </select>
                               <div className="help-block with-errors"></div>
                             </div>

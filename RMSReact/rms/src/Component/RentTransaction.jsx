@@ -17,7 +17,7 @@ function RentTransaction() {
   const rentMasters = useSelector(selectAllRentMaster).filter(
     (item) => item?.propertymaster._id === id
   );
-  console.log(rentMasters);
+  // console.log(rentMasters);
 
   const { whichroute } = useParams();
 
@@ -150,6 +150,7 @@ function RentTransaction() {
         success: res.data.message,
       });
     } catch (error) {
+      console.log(error);
       setMessage({
         ...message,
         danger: `${error.message}, While saving RentRecipt`,

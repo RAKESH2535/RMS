@@ -83,6 +83,7 @@ function ListRentMaster() {
             <th>IncrementSchedule</th>
             <th>PropertyDetail</th>
             <th>OwnerDetail</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody className="ligth-body">
@@ -106,6 +107,20 @@ function ListRentMaster() {
                 <td>{item.ownerMasters && item.ownerMasters.name}</td>
                 <td>
                   <div className="d-flex align-items-center list-action">
+                    <Button
+                      variant="contained"
+                      className="mr-2"
+                      color="primary"
+                      size="small"
+                      onClick={() =>
+                        navigate(
+                          `/dashboard/rentmaster/transcation?Id=${item.propertymaster._id}`
+                        )
+                      }
+                      style={{ textTransform: "none", marginRight: "8px" }}
+                    >
+                      Transaction
+                    </Button>
                     <button
                       className="badge bg-success mr-2"
                       onClick={() => handleUpdate(item._id)}

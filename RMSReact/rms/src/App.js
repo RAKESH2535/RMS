@@ -46,7 +46,7 @@ function App() {
           <Route path="addclientmaster/:id" element={<AddClientMasters />} />
           <Route path="listclientmaster" element={<ListClientMasters />} />
           <Route path="listrentrecipt" element={<RentRecipt />} />
-          <Route path = 'api-gateway' element={<Payment/>}/>
+          <Route path='api-gateway' element={<Payment/>}/>
           <Route
             path=":?/:whichroute/transcation"
             element={<RentTransactionForm />}

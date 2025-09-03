@@ -33,9 +33,14 @@ function Payment() {
 
     setLoading(true);
     axios.post(
-      'http://localhost:5000//api-gateway'
-      // 'https://rsmapi.vercel.app//api-gateway'
-    )
+      'http://localhost:5000/api-gateway',
+      // 'https://rsmapi.vercel.app//api-gateway,'
+      data
+    ).then(res =>{
+      console.log(res)
+    }).catch(error =>{
+      console.log(error);
+    })
   }
   return (
     <div id="app">
